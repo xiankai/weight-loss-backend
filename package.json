@@ -5,6 +5,9 @@
     "lodash": "^4.17.4",
     "node-pg": "^1.0.1"
   },
+  "scripts": {
+    "repl": "yarn chrome-remote-interface inspect"
+  },
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
