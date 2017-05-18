@@ -1,5 +1,5 @@
 const chrome = require('chrome-remote-interface');
-const { launchChrome } = require('../lib/page');
+const { launchChrome } = require('./page');
 const _ = require('lodash');
 
 function loadSubwayMenu(DOM) {
