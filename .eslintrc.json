@@ -1,9 +1,10 @@
 {
-    "extends": "airbnb-base",
-    "plugins": [
-        "import"
-    ],
-    "rules": {
-        "comma-dangle": [2, { "functions": "ignore" }]
-    }
+  "extends": "airbnb-base",
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "comma-dangle": [2, { "functions": "ignore" }],
+    "indent": [2, 2]
+  }
 }
