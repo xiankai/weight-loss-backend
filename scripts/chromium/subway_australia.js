@@ -41,18 +41,19 @@ launchChrome().then((launcher) => {
   chrome((protocol) => {
     // Extract the parts of the DevTools protocol we need for the task.
     // See API docs: https://chromedevtools.github.io/devtools-protocol/
-    const { Page, DOM } = protocol;
+    const { Page, Runtime } = protocol;
 
     // First, need to enable the domains we're going to use.
     Promise.all([
       Page.enable(),
-      DOM.enable()
+      Runtime.enable()
     ]).then(() => {
       Page.navigate({ url: 'https://www.subway.com.au/menu' });
+      Page.addScriptToEvaluateOnLoad({ scriptSource: require('../jquery').toString() });
 
       // Wait for window.onload before doing stuff.
       Page.loadEventFired(() => {
-        loadSubwayMenu(DOM).then(() => {
+        Runtime.evaluate({ expression: require('../jquery').toString() }).then(e => console.log(e.result)).then(() => {
           protocol.close();
           launcher.kill(); // Kill Chrome.
         });
