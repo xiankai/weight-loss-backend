@@ -4,8 +4,10 @@ function crawlPage(
   url,
   onJqueryLoad,
   args,
-  callback
+  callback,
+  exit
 ) {
+  console.log('opening page ' + url);
   var page = webpage.create();
   page.open(url, function onPageLoad(status) {
     if (status !== 'success') {
@@ -19,7 +21,10 @@ function crawlPage(
       } catch (err) {
         console.error(err);
       }
-      phantom.exit();
+
+      if (exit) {
+        phantom.exit();
+      }
     } else {
       console.error('Unable to inject jQuery');
     }
