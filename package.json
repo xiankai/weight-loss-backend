@@ -3,7 +3,7 @@
     "async": "^2.4.1",
     "chrome-remote-interface": "^0.22.0",
     "csvtojson": "^1.1.6",
-    "lighthouse": "^1.6.5",
+    "lighthouse": "^2.5.0",
     "lodash": "^4.17.4",
     "node-fetch": "^1.7.1",
     "node-pg": "^1.0.1",
