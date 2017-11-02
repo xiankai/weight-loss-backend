@@ -7,15 +7,19 @@
     "lodash": "^4.17.4",
     "node-fetch": "^1.7.1",
     "node-pg": "^1.0.1",
-    "phantomjs-prebuilt": "^2.1.14"
+    "phantomjs-prebuilt": "^2.1.14",
+    "snyk": "^1.47.0"
   },
   "scripts": {
-    "repl": "yarn chrome-remote-interface inspect"
+    "repl": "yarn chrome-remote-interface inspect",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-plugin-import": "^2.2.0",
     "jest": "^20.0.1"
-  }
+  },
+  "snyk": true
 }
