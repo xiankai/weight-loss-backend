@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "async": "^2.4.1",
-    "chrome-remote-interface": "^0.22.0",
+    "chrome-remote-interface": "^0.25.3",
     "csvtojson": "^1.1.6",
     "lighthouse": "^1.6.5",
     "lodash": "^4.17.4",
